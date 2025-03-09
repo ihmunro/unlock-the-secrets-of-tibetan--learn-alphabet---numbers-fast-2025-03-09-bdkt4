@@ -1,83 +1,222 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Landing Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Tibetan Easily | Master Tibetan Alphabet & Numbers</title>
     <meta name="description" content="Master Tibetan alphabet and numbers with interactive lessons, audio pronunciation, and practice exercises. Learn Tibetan easily, anytime, anywhere.">
+    <meta name="keywords" content="tibetan language, learn tibetan, tibetan alphabet, tibetan numbers, tibetan learning online">
+    <meta name="author" content="TibetanLearning">
+    <meta property="og:title" content="Learn Tibetan Easily | Master Tibetan Alphabet & Numbers">
+    <meta property="og:description" content="Master Tibetan alphabet and numbers with interactive lessons, audio pronunciation, and practice exercises.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tibetanlearning.com">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Playfair Display', 'serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                        secondary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        },
+                    },
+                    boxShadow: {
+                        'soft': '0 5px 15px rgba(0, 0, 0, 0.05)',
+                        'medium': '0 8px 30px rgba(0, 0, 0, 0.12)',
+                        'strong': '0 30px 60px rgba(0, 0, 0, 0.15)',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #7c3aed 0%, #4338ca 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #7c3aed 0%, #4338ca 100%);
+        }
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%237c3aed' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .chatbot-container {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+        }
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
 </head>
-<body class="font-['Inter'] antialiased bg-white text-gray-900">
-    <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+<body class="font-sans antialiased bg-white text-gray-900">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-primary-100">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="https://ihmunro.github.io/unlock-the-secrets-of-tibetan--learn-alphabet---numbers-fast-2025-03-09-bdkt4" class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
+                <a href="#" class="text-2xl font-bold font-heading gradient-text hover:scale-105 transition-transform duration-300">
                     TibetanLearning
                 </a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-gray-600 hover:text-gray-900 hover:scale-105 transition-all duration-300">Features</a>
-                    <a href="#benefits" class="text-gray-600 hover:text-gray-900 hover:scale-105 transition-all duration-300">Benefits</a>
-                    <a href="#testimonials" class="text-gray-600 hover:text-gray-900 hover:scale-105 transition-all duration-300">Testimonials</a>
-                    <a href="#faq" class="text-gray-600 hover:text-gray-900 hover:scale-105 transition-all duration-300">FAQ</a>
-                    <a href="#about" class="text-gray-600 hover:text-gray-900 hover:scale-105 transition-all duration-300">About</a>
-                    <a href="#contact" class="text-gray-600 hover:text-gray-900 hover:scale-105 transition-all duration-300">Contact</a>
+                    <a href="#features" class="text-gray-700 hover:text-primary-700 hover:scale-105 transition-all duration-300">Features</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-primary-700 hover:scale-105 transition-all duration-300">Benefits</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary-700 hover:scale-105 transition-all duration-300">Testimonials</a>
+                    <a href="#faq" class="text-gray-700 hover:text-primary-700 hover:scale-105 transition-all duration-300">FAQ</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary-700 hover:scale-105 transition-all duration-300">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary-700 hover:scale-105 transition-all duration-300">Contact</a>
                 </div>
                 <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
-                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
                 </button>
-                <a href="https://learningtibetan.com" class="hidden md:inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium hover:shadow-lg hover:scale-105 transform transition duration-300">
+                <a href="#" class="hidden md:inline-flex items-center px-6 py-3 rounded-full gradient-bg text-white font-medium hover:shadow-lg hover:scale-105 transform transition duration-300">
                     Start Learning
                 </a>
             </div>
-            <div class="mobile-menu hidden md:hidden mt-4 bg-white rounded-lg shadow-lg absolute left-0 right-0 p-4">
-                <a href="#features" class="block py-2 px-4 text-gray-600 hover:bg-purple-50 rounded transition-colors duration-300">Features</a>
-                <a href="#benefits" class="block py-2 px-4 text-gray-600 hover:bg-purple-50 rounded transition-colors duration-300">Benefits</a>
-                <a href="#testimonials" class="block py-2 px-4 text-gray-600 hover:bg-purple-50 rounded transition-colors duration-300">Testimonials</a>
-                <a href="#faq" class="block py-2 px-4 text-gray-600 hover:bg-purple-50 rounded transition-colors duration-300">FAQ</a>
-                <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-purple-50 rounded transition-colors duration-300">About</a>
-                <a href="#contact" class="block py-2 px-4 text-gray-600 hover:bg-purple-50 rounded transition-colors duration-300">Contact</a>
-                <a href="https://learningtibetan.com" class="block mt-2 py-2 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg text-center hover:shadow-lg transition duration-300">Start Learning</a>
+            <div class="mobile-menu hidden md:hidden mt-4 bg-white rounded-lg shadow-medium absolute left-0 right-0 p-4">
+                <a href="#features" class="block py-2 px-4 text-gray-700 hover:bg-primary-50 rounded transition-colors duration-300">Features</a>
+                <a href="#benefits" class="block py-2 px-4 text-gray-700 hover:bg-primary-50 rounded transition-colors duration-300">Benefits</a>
+                <a href="#testimonials" class="block py-2 px-4 text-gray-700 hover:bg-primary-50 rounded transition-colors duration-300">Testimonials</a>
+                <a href="#faq" class="block py-2 px-4 text-gray-700 hover:bg-primary-50 rounded transition-colors duration-300">FAQ</a>
+                <a href="#about" class="block py-2 px-4 text-gray-700 hover:bg-primary-50 rounded transition-colors duration-300">About</a>
+                <a href="#contact" class="block py-2 px-4 text-gray-700 hover:bg-primary-50 rounded transition-colors duration-300">Contact</a>
+                <a href="#" class="block mt-2 py-2 px-4 gradient-bg text-white rounded-lg text-center hover:shadow-lg transition duration-300">Start Learning</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="pt-32 pb-24 bg-gradient-to-br from-purple-50 via-white to-indigo-50">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                        Unlock the Secrets of Tibetan: Learn Alphabet & Numbers Fast
-                    </h1>
-                    <p class="text-xl md:text-2xl text-gray-600 mb-12">
-                        Master the ancient wisdom of Tibet through our innovative learning platform. Join thousands of students worldwide in discovering the beauty of Tibetan language.
-                    </p>
-                    <a href="https://learningtibetan.com" class="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium text-lg hover:shadow-xl hover:scale-105 transform transition duration-300">
-                        Begin Your Journey
-                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                        </svg>
-                    </a>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 hero-pattern overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fade-in">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading leading-tight mb-6 gradient-text">
+                            Unlock the Secrets of Tibetan Language
+                        </h1>
+                        <p class="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed">
+                            Master the ancient wisdom of Tibet through our innovative learning platform. Join thousands of students worldwide in discovering the beauty of Tibetan language.
+                        </p>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#features" class="inline-flex items-center justify-center px-8 py-4 rounded-full gradient-bg text-white font-medium text-lg hover:shadow-xl hover:scale-105 transform transition duration-300">
+                                Begin Your Journey
+                                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </a>
+                            <a href="#testimonials" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white border border-primary-200 text-primary-700 font-medium text-lg hover:bg-primary-50 hover:shadow-lg transition duration-300">
+                                See Success Stories
+                            </a>
+                        </div>
+                        <div class="mt-8 text-center sm:text-left">
+                            <a href="#features" class="inline-flex items-center text-primary-600 hover:text-primary-800">
+                                <span class="scroll-indicator block">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                </span>
+                                <span class="ml-2">Discover More</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative animate-fade-in">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-3xl transform rotate-3"></div>
+                        <img 
+                            src="https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                            alt="Tibetan monastery with mountains in background" 
+                            class="relative z-10 w-full h-auto rounded-3xl shadow-strong object-cover"
+                        />
+                        <div class="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-medium transform rotate-3 z-20">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                <p class="text-sm font-medium">4,500+ Active Learners</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
+        <!-- Features Section -->
         <section id="features" class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Comprehensive Learning Experience</h2>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary-600 font-semibold uppercase tracking-wider">Our Approach</span>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mt-2 mb-4 gradient-text">Comprehensive Learning Experience</h2>
+                    <p class="text-lg text-gray-600">Our platform combines traditional teaching methods with modern technology to create an engaging and effective learning environment.</p>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition duration-300">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
                             </svg>
                         </div>
@@ -85,9 +224,9 @@
                         <p class="text-gray-600">Experience dynamic, gamified content with real-time feedback and adaptive learning technology. Master Tibetan scripts through engaging exercises designed by language experts.</p>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition duration-300">
+                        <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
                             </svg>
                         </div>
@@ -95,9 +234,9 @@
                         <p class="text-gray-600">Perfect your accent with crystal-clear audio recordings from native Tibetan speakers. Practice with our innovative speech recognition technology for instant pronunciation feedback.</p>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
-                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition duration-300">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
                             </svg>
                         </div>
@@ -108,48 +247,58 @@
             </div>
         </section>
 
-        <section id="benefits" class="py-24 bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+        <!-- Benefits Section -->
+        <section id="benefits" class="py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 hero-pattern">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Transform Your Learning Journey</h2>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary-600 font-semibold uppercase tracking-wider">Why Choose Us</span>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mt-2 mb-4 gradient-text">Transform Your Learning Journey</h2>
+                    <p class="text-lg text-gray-600">Our platform offers unique advantages that make learning Tibetan efficient, enjoyable, and rewarding.</p>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div class="text-center transform hover:scale-105 transition duration-300">
-                        <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mx-auto mb-6 hover:shadow-xl transition duration-300">
-                            <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-20 h-20 bg-white rounded-full shadow-medium flex items-center justify-center mx-auto mb-6 hover:shadow-strong transition duration-300">
+                            <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Achieve Conversational Fluency</h3>
-                        <p class="text-gray-600">Develop natural speaking abilities through our proven methodology. Start having real conversations in Tibetan within weeks.</p>
+                        <p class="text-gray-600 max-w-sm mx-auto">Develop natural speaking abilities through our proven methodology. Start having real conversations in Tibetan within weeks.</p>
                     </div>
 
                     <div class="text-center transform hover:scale-105 transition duration-300">
-                        <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mx-auto mb-6 hover:shadow-xl transition duration-300">
-                            <svg class="w-10 h-10 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-20 h-20 bg-white rounded-full shadow-medium flex items-center justify-center mx-auto mb-6 hover:shadow-strong transition duration-300">
+                            <svg class="w-10 h-10 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Cultural Immersion</h3>
-                        <p class="text-gray-600">Gain deep insights into Tibetan culture, traditions, and philosophy while mastering the language fundamentals.</p>
+                        <p class="text-gray-600 max-w-sm mx-auto">Gain deep insights into Tibetan culture, traditions, and philosophy while mastering the language fundamentals.</p>
                     </div>
 
                     <div class="text-center transform hover:scale-105 transition duration-300">
-                        <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mx-auto mb-6 hover:shadow-xl transition duration-300">
-                            <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-20 h-20 bg-white rounded-full shadow-medium flex items-center justify-center mx-auto mb-6 hover:shadow-strong transition duration-300">
+                            <svg class="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Accelerated Learning</h3>
-                        <p class="text-gray-600">Master Tibetan 3x faster than traditional methods with our scientifically-proven learning techniques.</p>
+                        <p class="text-gray-600 max-w-sm mx-auto">Master Tibetan 3x faster than traditional methods with our scientifically-proven learning techniques.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Testimonials Section -->
         <section id="testimonials" class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Students Say</h2>
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary-600 font-semibold uppercase tracking-wider">Success Stories</span>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mt-2 mb-4 gradient-text">What Our Students Say</h2>
+                    <p class="text-lg text-gray-600">Hear from our community of learners about their experience with our platform.</p>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-soft hover:shadow-medium transition duration-300">
                         <div class="flex items-center mb-4">
                             <div class="flex text-yellow-400">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -169,12 +318,17 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="text-gray-600 mb-4">"The interactive lessons and audio pronunciation features have transformed my Tibetan learning journey. I can now read basic texts and hold simple conversations after just 3 months!"</p>
-                        <div class="font-semibold">Sarah Chen</div>
-                        <div class="text-sm text-gray-500">Buddhist Studies Student</div>
+                        <p class="text-gray-600 mb-4 italic">"The interactive lessons and audio pronunciation features have transformed my Tibetan learning journey. I can now read basic texts and hold simple conversations after just 3 months!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold mr-3">SC</div>
+                            <div>
+                                <div class="font-semibold">Sarah Chen</div>
+                                <div class="text-sm text-gray-500">Buddhist Studies Student</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-soft hover:shadow-medium transition duration-300">
                         <div class="flex items-center mb-4">
                             <div class="flex text-yellow-400">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -194,12 +348,17 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="text-gray-600 mb-4">"As a researcher focusing on Tibetan studies, this platform has been invaluable. The cultural insights and comprehensive approach to teaching the script have exceeded my expectations."</p>
-                        <div class="font-semibold">Dr. Michael Thompson</div>
-                        <div class="text-sm text-gray-500">Cultural Researcher</div>
+                        <p class="text-gray-600 mb-4 italic">"As a researcher focusing on Tibetan studies, this platform has been invaluable. The cultural insights and comprehensive approach to teaching the script have exceeded my expectations."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-700 font-bold mr-3">MT</div>
+                            <div>
+                                <div class="font-semibold">Dr. Michael Thompson</div>
+                                <div class="text-sm text-gray-500">Cultural Researcher</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-soft hover:shadow-medium transition duration-300">
                         <div class="flex items-center mb-4">
                             <div class="flex text-yellow-400">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -212,6 +371,258 @@
                                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                                 </svg>
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 italic">"I've tried several language learning platforms, but this Tibetan course stands out. The alphabet learning section is particularly well-designed, making what seemed impossible actually enjoyable and achievable."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold mr-3">JW</div>
+                            <div>
+                                <div class="font-semibold">James Wilson</div>
+                                <div class="text-sm text-gray-500">Language Enthusiast</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-soft hover:shadow-medium transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 italic">"The numeric system section was especially helpful for my travels in Tibet. Being able to understand prices and dates made a huge difference in my experience. Highly recommended!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-700 font-bold mr-3">ER</div>
+                            <div>
+                                <div class="font-semibold">Emily Rodriguez</div>
+                                <div class="text-sm text-gray-500">World Traveler</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 hero-pattern">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary-600 font-semibold uppercase tracking-wider">Common Questions</span>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mt-2 mb-4 gradient-text">Frequently Asked Questions</h2>
+                    <p class="text-lg text-gray-600">Find answers to common questions about our Tibetan language learning platform.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">How long does it take to learn the Tibetan alphabet?</h3>
+                        <p class="text-gray-600">With our structured approach, most students can recognize and write all 30 basic Tibetan consonants within 2-3 weeks of consistent practice. The vowel marks and combined characters typically take an additional 2-4 weeks to master.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Do I need any prior language learning experience?</h3>
+                        <p class="text-gray-600">No prior experience is necessary! Our platform is designed for complete beginners. The interactive lessons gradually introduce concepts, ensuring a smooth learning experience regardless of your background.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Can I learn Tibetan numbers without learning the alphabet?</h3>
+                        <p class="text-gray-600">Absolutely! Our course is modular, allowing you to focus on specific areas of interest. The number system module stands alone and can be completed independently of the alphabet lessons.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Is there support if I get stuck on a particular concept?</h3>
+                        <p class="text-gray-600">Yes, we offer multiple support options. You'll have access to our community forum, detailed explanations with each lesson, and optional 1-on-1 tutoring sessions with native Tibetan speakers for personalized guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <span class="text-primary-600 font-semibold uppercase tracking-wider">Our Story</span>
+                        <h2 class="text-3xl md:text-4xl font-bold font-heading mt-2 mb-4 gradient-text">About Our Learning Platform</h2>
+                        <p class="text-lg text-gray-600">Learn more about our mission and the team behind TibetanLearning.</p>
+                    </div>
+                    <div class="prose prose-lg max-w-none text-gray-600">
+                        <p class="mb-6">Our Tibetan language learning platform was founded in 2021 by a team of passionate linguists and Tibetan culture enthusiasts. We recognized that while there are many resources for popular languages, the beautiful and historically significant Tibetan language had limited accessible learning materials.</p>
+                        <p class="mb-6">Our mission is to preserve and promote Tibetan language and culture through innovative digital education. We work with native speakers from different regions of Tibet to ensure authenticity in pronunciation and usage.</p>
+                        <p class="mb-6">What sets our approach apart is our deep integration of cultural context with language learning. As you progress through our lessons, you'll gain insights into Tibetan history, philosophy, and daily life, making your learning journey more meaningful and engaging.</p>
+                        <p>Whether you're a traveler planning a trip to Tibet, a scholar interested in accessing original Buddhist texts, or simply a language enthusiast looking for a new challenge, our platform provides the tools and community to support your goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 hero-pattern">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary-600 font-semibold uppercase tracking-wider">Reach Out</span>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mt-2 mb-4 gradient-text">Get in Touch</h2>
+                    <p class="text-lg text-gray-600">Have questions or feedback? We'd love to hear from you!</p>
+                </div>
+                <div class="max-w-lg mx-auto">
+                    <form class="space-y-6 bg-white p-8 rounded-2xl shadow-medium">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition duration-200" placeholder="Enter your full name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition duration-200" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition duration-200" placeholder="How can we help you?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent transition duration-200" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 px-4 gradient-bg text-white font-medium rounded-lg hover:shadow-lg transform hover:scale-[1.02] transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">TibetanLearning</h3>
+                    <p class="text-gray-400">Making the ancient wisdom of Tibet accessible to the modern world through innovative language education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Community</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Learning Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Cultural Insights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter for learning tips and updates</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 TibetanLearning. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div id="deployment-5f2521a1-ed22-46dc-9baf-e3189b4f35cb"></div>
+        <script src="https://tibetan.aibizbots4u.com/api/embed/bundle.js" defer></script>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = document.querySelectorAll('.mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100, // Offset for fixed header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Add animation to form submission
+            const contactForm = document.querySelector('#contact form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                    this.reset();
+                });
+            }
+
+            // Animate elements when they come into view
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.feature-card, .text-center');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenHeight = window.innerHeight;
+                    
+                    if (elementPosition < screenHeight * 0.9) {
+                        element.classList.add('animate-slide-up');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on page load
+        });
+    </script>
 </body>
 </html>
